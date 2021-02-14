@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<html lang="en">
+<title>Database Security</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="topnav.css">
+<link rel="stylesheet" href="sidenav.css">
+
+</head>
+
+
+<!--topbar -->
+
+<body>
+
+<div class="topnav">
+
+
+  <a class="active" href="#home" >D A T A B A S E </a>
+  <a class="active" href="#home"> S E C U R I T Y</a>
+
+  <div class="topnav-right">
+  <a href="home.html">Home</a>
+  <a href="lesson.html">Lesson</a>
+  </div>]
+
+</div>
+
+<!--sidebar-->
+<div class="tab">
+  <button class="tablinks" onclick="openContent(event, 'intro')" id="defaultOpen">INTRODUCTION</button>
+  <button class="tablinks" onclick="openContent(event, 'threats')" >DATABASE THREAT</button>
+  <button class="tablinks" onclick="openContent(event, 'controlmethod')">CONTROL METHOD</button>
+</div>
+
+<!-- content -->
+<div id="intro" class="tabcontent">
+  <h3>What is Database Security ?</h3>
+  <p>Database security involves proecting database from unauthorized access, modification ,or destruction.Since the database represents an esssential corporate resource , database security is an important subcomponent of any organization's overall information systems security plan.</p>
+
+
+<div class="tabcontent1">
+  <h3>Why it is important ?</h3>
+  <p>Database security is more than just important: it is essential to any company with any online component. Sufficient database security prevents data bring lost or compromised, which may have serious ramifications for the company both in terms of finances and reputation. Database security helps:</p>
+  <li>Company’s block attacks, including ransomware and breached firewalls, which in turn keeps sensitive information safe.</li>
+  <li>Prevent malware or viral infections which can corrupt data, bring down a network, and spread to all end point devices.</li>
+  <li>Ensure that physical damage to the server doesn’t result in the loss of data.</li>
+  <li>Prevent data loss through corruption of files or programming errors.</li>
+
+</div>
+</div>
+
+<div id="threats" class="tabcontent" >
+  <h4>DATABASE THREAT</<h4>
+  <div class="btn-group">
+
+  </div>
+
+
+</div>
+
+<div id="controlmethod" class="tabcontent">
+  <h3>control method</h3>
+</div>
+
+<!--js-->
+<script>
+function openContent(evt, contentName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(contentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+</script>
+
+</body>
+</html>
