@@ -10,10 +10,7 @@
 
 <link rel="stylesheet" href="topnav.css">
 <link rel="stylesheet" href="sidenav.css">
-
-</head>
-
-
+<link rel="stylesheet" href="btn-group.css">
 <!--topbar -->
 
 <body>
@@ -21,20 +18,20 @@
 <div class="topnav">
 
 
-  <a class="active" href="#home" >D A T A B A S E </a>
-  <a class="active" href="#home"> S E C U R I T Y</a>
+  <a class="active" href="intro.html" >D A T A B A S E </a>
+  <a class="active" href="intro.html"> S E C U R I T Y</a>
 
   <div class="topnav-right">
   <a href="home.html">Home</a>
   <a href="lesson.html">Lesson</a>
-  </div>]
+  </div>
 
 </div>
 
 <!--sidebar-->
 <div class="tab">
   <button class="tablinks" onclick="openContent(event, 'intro')" id="defaultOpen">INTRODUCTION</button>
-  <button class="tablinks" onclick="openContent(event, 'threats')" >DATABASE THREAT</button>
+  <button class="tablinks" onclick="openContent(event, 'threats')">DATABASE THREAT</button>
   <button class="tablinks" onclick="openContent(event, 'controlmethod')">CONTROL METHOD</button>
 </div>
 
@@ -56,16 +53,33 @@
 </div>
 
 <div id="threats" class="tabcontent" >
-  <h4>DATABASE THREAT</<h4>
-  <div class="btn-group">
+  <h3>DATABASE THREAT</<h3>
+    <br><br>
+    <div class="btn-group" style="width:100%">
+  <a href="malware.html"><button style="width:50%">Malware </button></a>
+  <a href="Weak-Audit-Trail.html"><button style="width:50%">Weak Audit Trail</button></a>
+  <br><br>
+  <a href="SQL-Injection.html"><button style="width:50%">SQL Injection </button></a>
+  <a href="DOS.html"><button style="width:50%">Denial of Service</button></a>
+  <br><br>
+  <a href="Weak-Authentic.html"><button style="width:50%">Weak Authentication </button></a>
+  <a href="Privilege-Elevation.html"><button style="width:50%">Privilege Elevation</button></a>
+  <br><br>
+  <a href="Backup-Data-Exposure .html"><button style="width:50%">Backup Data Exposure </button></a>
+  <a href="Excessive-Privileges.html"><button style="width:50%">Excessive Privileges</button></a>
+  <br><br>
+  <a href="Unmanaged-Sensitive-Data.html"><button style="width:50%">Unmanaged Sensitive Data </button></a>
+  <a href="Unmanaged-Sensitive-Data.html"><button style="width:50%">Database Vulnerabilities</button></a>
+  </div>
 
   </div>
 
-
+<div id="malware" class="tabcontent" >
+      <h4>DATABASE THREAT</<h4>
 </div>
 
 <div id="controlmethod" class="tabcontent">
-  <h3>control method</h3>
+  <h4>CONTROL METHOD</h4>
 </div>
 
 <!--js-->
@@ -87,8 +101,23 @@ function openContent(evt, contentName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
 </script>
+
 
 </body>
 </html>
