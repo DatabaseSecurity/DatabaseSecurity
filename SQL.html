@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="sidenav.css">
 <link rel="stylesheet" href="btn-group.css">
 <link rel="stylesheet" href="table.css">
+<link rel="stylesheet" href="center.css">
 <!--topbar -->
 
 <body>
@@ -39,7 +40,7 @@
     <a href="DOS.html">Denial of Service</a>
     <a href="WeakAut.html">Weak Authentication</a>
     <a href="SDE.html">Sensitive Data Exposure</a>
-    <a href="Exces-Priv.html">Privilege Database Abused</a>
+    <a href="Exces-Priv.html">Excessive Privileges</a>
     <a href="USD.html">Unmanaged Sensitive Data </a>
 
     </div>
@@ -77,8 +78,13 @@
  <br><br>
  <div class="column" style="background-color:#bbb;">
    <h2 style="text-align:center">Example Attack Scenario :</h2>
-<p> An application uses untrusted data in the construction of the following vulnerable SQL call:</p>
-<li></li>
+<p style="text-align:center">Scenario #1:  An application uses untrusted data in the construction of the following vulnerable SQL call:</p>
+<img src="sql1.PNG" alt="sql1" class="center" >
+<p style="text-align:center">Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):</p>
+<img src="sql2.PNG" alt="sql2" class="center" >
+<p style="text-align:center">In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ‘ or ‘1’=’1. For example:</p>
+<img src="sql3.PNG" alt="sql3" class="center" >
+<p style="text-align:center" >This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.</p>
  </div>
  <br>
  <div class="column" style="background-color:#bbb;">
@@ -94,6 +100,12 @@ so on cannot be escaped, and thus user-supplied structure
 names are dangerous. This is a common issue in report-writing
 software.</li>
  </div>
+ <div class="column" style="background-color:#bbb; ">
+   <h5 style="text-align:center">Source : </h5>
+   <p style="text-align:center">https://owasp.org/www-project-top-ten/2017/A1_2017-Injection</p>
+
+
+  </div>
 </div>
   <!--js-->
   <script>
@@ -136,3 +148,4 @@ software.</li>
 
   </body>
   </html>
+
