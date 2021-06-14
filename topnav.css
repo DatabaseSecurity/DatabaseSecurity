@@ -6,6 +6,10 @@ body {
 .topnav {
     background-color: #000000;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 /* Style the links inside the navigation bar */
@@ -16,6 +20,7 @@ body {
   padding: 13px 16px;
   text-decoration: none;
   font-size: 30px;
+  display: block;
 }
 
 /* Change the color of links on hover */
@@ -38,4 +43,11 @@ body {
   position: absolute;
   margin-top: 15px;
   margin-left: :10px;
+}
+.table
+{
+  margin-top: 100px;
+  margin-bottom: 60px;
+  top: 0;
+  z-index: 2;
 }
