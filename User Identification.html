@@ -68,9 +68,6 @@
       <a href="User Identification.html">User Identification</a>
       <a href="Accountability.html">Accountability And Auditing</a>
       <a href="Encryption.html">Encryption</a>
-      <!---<a href="SDE.html">Sensitive Data Exposure</a>
-      <a href="Exces-Priv.html">Privilege Database Abused</a>
-      <a href="USD.html">Unmanaged Sensitive Data </a>-->
 
       </div>
     <button class="tablinks" onclick="openContent(event, 'lesson')"><a href="lesson.html">LESSON</button></a>
@@ -79,76 +76,38 @@
 
   <!--content-->
   <div class="table">
- <div class="column" style="background-color:lightgrey;height: 480px; padding-right:2%">
+ <div class="column" style="background-color:lightgrey;height: auto; padding-right:2%">
    <h2 style="text-align:center">User Identification </h2>
-   <p style="font-size: 20px; text-align:center" >A basic security requirement is that you must know your users. You must identify them before you can determine their privileges and access rights, and so that you can audit their actions upon the data.
-User can be authenticated in many ways before they are allowed to create a database. Database authentication includes both identification and authentication of users. External authentication can be performed by the operating system or network service. Also the user authentication can be defined by Secure Socket Layer (SSL), through enterprise roles, through middle tier server authentication also known as proxy authentication.
-This is the very basic requirement to ensure security since the identification process defines a set of people that are allowed to access data. To ensure security, the identity is authenticated and it keeps the sensitive data secure and from being modified by unauthorized users.
-Attackers can take different approaches like bypass authentication, default password, privilege escalation, password guessing by brute force and rainbow attack when they attempt to compromise user identification and authentication.
-<!--<ul style="text-align:center">1. File permissions - create, read, edit or delete on a file server. </ul>
-<ul style="text-align:center">2. Program permissions - right to execute a program on an application server. </ul>
-<ul style="text-align:center">3. Data rights - right to retrieve or update information in a database.  </ul>-->
-</p>
+   <p style="font-size: 20px; text-align:center" >A basic security requirement is that you must know your users. You must identify them before you can determine their privileges and access rights,
+     and so that you can audit their actions upon the data. User can be authenticated in many ways before they are allowed to create a database. Database authentication includes both identification
+     and authentication of users. External authentication can be performed by the operating system or network service. Also the user authentication can be defined by Secure Socket Layer (SSL),
+     through enterprise roles, through middle tier server authentication also known as proxy authentication. This is the very basic requirement to ensure security since the identification process
+     defines a set of people that are allowed to access data. To ensure security, the identity is authenticated and it keeps the sensitive data secure and from being modified by unauthorized users.
+     Attackers can take different approaches like bypass authentication, default password, privilege escalation, password guessing by brute force and rainbow attack when they attempt to compromise
+     user identification and authentication.
+   </p>
+   <center><iframe width="480" height="360" class="center" src="https://www.youtube.com/embed/3hj_r_N0qMs"></iframe></center>
+   <ul style="text-align: center; margin-top:10px; font-weight: bold" >How and Why User Identification is Important</ul>
 
- <!--<div class="rw">
-   <div class="col">
-     <div class="imgeffect">
+ </div>
 
-     <div class="container">
-       <p style="text-align">SPYWARE</p>
-    <img src="spyware.jpg" alt="spyware" style="width:290px; border-radius:12px;height:150px" class="image">
-  <div class="overlay">
-    <div class="text">Malicious behavior that aims to gather information about a person or organization and send such information to another entity in a way that harms the user; for example by violating their privacy or endangering their device's security</div>
-  </div>
-    </div>
-    </div>
-   </div>
+ <div class="column" style="background-color:lightgrey;height: auto; padding-right:2%">
+   <h2 style="text-align:center">Method of User Identification</h2>
 
-   <div class="col">
-     <div class="imgeffect">
+   <ul style="text-align:center; margin:2px; font-weight: bold" >1. Identify Users via Application User Translation</ul>
+    <p style="font-size: 20px; text-align:center" >Some applications manage a pool of database connections. In such three-tier architectures the pooled connections all
+      log into a database using a single functional ID, and then manage all application users internally. When a user session needs access to the database ,it acquires
+      a connection from the pool, uses it and then releases it back to the pool.
+    </p>
+   <ul style="text-align:center; margin:2px; font-weight: bold" >2. Identify Users via API</ul>
+   <p style="font-size: 20px; text-align:center" >For some applications that manage users internally, the application user cannot be identified from the traffic.
+   </p>
 
-     <div class="container">
-       <p style="text-align">RANSOMEWARE</p>
-    <img src="ransomeware.gif" alt="spyware" style="width:290px; border-radius:12px;height:150px" class="image">
-   <div class="overlay">
-    <div class="text">Ransomware is malicious software that infects your computer and displays messages demanding a fee to be paid in order for your system to work again</div>
-   </div>
-    </div>
-    </div>
-   </div>
+   <ul style="text-align:center; margin:2px; font-weight: bold" >3. Identify Users via Stored Procedures</ul>
+   <p style="font-size: 20px; text-align:center" >In many existing applications, all of the information needed to identify an application user can be obtained from existing database traffic, from stored procedure calls.
+   </p>
 
-   <div class="col">
-     <div class="imgeffect">
-
-     <div class="container">
-       <p style="text-align">TROJANHORSE</p>
-    <img src="trojan.gif" alt="spyware" style="width:290px; border-radius:12px ;height:150px" class="image">
-   <div class="overlay">
-    <div class="text">A Trojan horse, or “Trojan”,enters your system disguised as a normal, harmless file or program designed to trick you into downloading and installing malware. As soon as you install a Trojan, you are giving cyber criminals access to your system.</div>
-   </div>
-    </div>
-    </div>
-   </div>
-
-   <div class="col">
-     <div class="imgeffect">
-
-     <div class="container">
-       <p style="text-align">WORM</p>
-    <img src="worm.jpg" alt="spyware" style="width:290px; border-radius:12px ;height:150px" class="image">
-  <div class="overlay">
-    <div class="text">A computer worm is a standalone malware computer program that replicates itself in order to spread to other computers. It often uses a computer network to spread itself, relying on security failures on the target computer to access it. It will use this machine as a host to scan and infect other computers.</div>
-  </div>
-    </div>
-    </div>
-  </div>
-</div>
-
- <br><br><br><br><br><br>
- <div class="column1" style="background-color:#bbb;height: 100px; ">
-   <h2 style="text-align:center">Countermeasure</h2>
-   <p>Enable firewall protection and Install Antivirus.</p>
- </div>-->
+ </div>
 
   <!--js-->
   <script>
